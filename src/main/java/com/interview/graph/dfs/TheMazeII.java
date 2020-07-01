@@ -1,4 +1,4 @@
-package com.interview.graph.bfs;
+package com.interview.graph.dfs;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;

@@ -1,4 +1,4 @@
-package com.interview.graph.bfs;
+package com.interview.graph.dfs;
 
 /**
  * The idea is just using BFS with a PriorityQueue(dijkstra's algorithm),
