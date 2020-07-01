@@ -18,6 +18,9 @@ import com.interview.common.CommonUtility;
  * binary 2D array. 1 means the wall and 0 means the empty space. You may assume
  * that the borders of the maze are all walls. The start and destination
  * coordinates are represented by row and column indexes.
+ * 
+ * TheMazeIIOptimized Time complexity : O((mn)^2). Complete traversal of maze will be
+ * done in the worst case and function minDistance takes O(mn) time.
  */
 
 public class TheMazeIIOptimized {
@@ -35,8 +38,8 @@ public class TheMazeIIOptimized {
 		 */
 		distance[start[0]][start[1]] = 0;
 		dijkstra(maze, distance, visited);
-		CommonUtility.print2D(distance);
-		System.out.println(Arrays.toString(dest));
+		// CommonUtility.print2D(distance);
+		// System.out.println(Arrays.toString(dest));
 		return distance[dest[0]][dest[1]] == Integer.MAX_VALUE ? -1 : distance[dest[0]][dest[1]];
 	}
 
