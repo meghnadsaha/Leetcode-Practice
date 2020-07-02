@@ -10,5 +10,5 @@ public class ConvertBinaryNumberinALinkedListtoInteger {
 			head = head.next; // Update head
 		}
 		return num;
-	}	
+	}
 }

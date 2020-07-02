@@ -6,7 +6,7 @@ public class CopyListwithRandomPointer {
 			return null;
 		}
 
-			// copy linked list to following structure A -> A' -> B -> B' .... -> C
+		// copy linked list to following structure A -> A' -> B -> B' .... -> C
 		// -> C'
 		ListNode p = head;
 		while (p != null) {

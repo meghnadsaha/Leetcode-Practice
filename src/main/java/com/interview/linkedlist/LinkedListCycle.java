@@ -7,7 +7,7 @@ public class LinkedListCycle {
 	 * Runner moves two steps at time. 
 	 * If the Linked List has a cycle walker and runner
 	 * will meet at some point.
-	 */	
+	 */
 	public boolean hasCycle(ListNode head) {
 		ListNode walker = head;
 		ListNode runner = head;

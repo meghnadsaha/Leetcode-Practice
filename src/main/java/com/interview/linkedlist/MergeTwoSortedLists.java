@@ -8,7 +8,7 @@ public class MergeTwoSortedLists {
 		if (l1 != null && l2 != null) {
 			// Find the node with smaller value.
 			ListNode selectedNode = (l1.val < l2.val) ? l1 : l2;
-			
+ 
 			// Find the node with greater value.
 			ListNode notSelectedNode = (l1.val < l2.val) ? l2 : l1;
 
