@@ -1,5 +1,7 @@
 package com.interview.linkedlist;
 
+
+
 public class ListNodee {
 
 	int val;
