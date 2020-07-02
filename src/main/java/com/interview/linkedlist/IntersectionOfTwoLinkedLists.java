@@ -6,7 +6,7 @@ Case 1 (Have Intersection & Same Len):
        a
 A:     a1 → a2 → a3
 				            ↘
-				            c1 → c2 → c3 → null
+				           c1 → c2 → c3 → null
 				            ↗            
 B:     b1 → b2 → b3
        b

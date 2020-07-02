@@ -6,7 +6,7 @@ public class MergekSortedLists {
 	public ListNode mergeKLists(ListNode[] lists) {
 		// checking size since PriorityQueue cannot have initial size of 0.
 		if (lists == null || lists.length == 0) {
-			return null;
+			return null;	
 		}
 
 		Queue<ListNode> minHeap = new PriorityQueue<ListNode>(lists.length,

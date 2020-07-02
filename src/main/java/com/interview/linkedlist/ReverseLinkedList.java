@@ -4,7 +4,7 @@ public class ReverseLinkedList {
 
 	public ListNode reverseList(ListNode head) {
 		if (head == null)
-			return null;
+			return null;	
 		if (head.next == null)
 			return head;
 		if (head.next.next == null) {

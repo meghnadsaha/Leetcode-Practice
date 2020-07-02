@@ -5,7 +5,7 @@ public class ListNode {
     ListNode next;
     ListNode random;
 
-    public ListNode(int val) {
+    public ListNode(int val) {	
         this.val = val;
         this.next = null;
         this.random = null;

@@ -5,7 +5,7 @@ public class LinkedListCycleII {
 	public ListNode detectCycle(ListNode head) {
 		if (head == null || head.next == null)
 			return null;
-		ListNode slow = head;
+		ListNode slow = head;	
 		ListNode fast = head;
 		ListNode index = head;
 		while (fast.next != null && fast.next.next != null) {
