@@ -1,7 +1,7 @@
 package com.interview.graph.dfs;
 
 import java.util.PriorityQueue;
-
+	
 public class TheMazeI {
 
 	int[][] dirs = { { 1, 0 }, { 0, -1 }, { 0, 1 }, { -1, 0 } };

@@ -1,7 +1,7 @@
 package com.interview.graph;
 
 public class TheMaze {
-
+	
 	public boolean hasPath(int[][] maze, int[] start, int[] destination) {
 		boolean[][] visited = new boolean[maze.length][maze[0].length];
 		return dfs(maze, start, destination, visited);

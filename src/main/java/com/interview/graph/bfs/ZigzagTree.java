@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.*;
 
 import com.interview.binarysearch.TreeNode;
-
+	
 public class ZigzagTree {
 	public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
 		List<List<Integer>> output = new LinkedList<>();
