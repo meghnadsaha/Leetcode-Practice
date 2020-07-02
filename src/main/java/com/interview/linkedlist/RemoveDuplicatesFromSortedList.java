@@ -9,7 +9,7 @@ public class RemoveDuplicatesFromSortedList {
 		while (list.next != null) {
 			if (list.val == list.next.val)
 				list.next = list.next.next;
-			else
+			else	
 				list = list.next;
 		}
 

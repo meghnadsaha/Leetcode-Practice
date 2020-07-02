@@ -7,7 +7,7 @@ public class MergekSortedLists {
 		// checking size since PriorityQueue cannot have initial size of 0.
 		if (lists == null || lists.length == 0) {
 			return null;
-		}
+		}	
 
 		Queue<ListNode> minHeap = new PriorityQueue<ListNode>(lists.length,
 				(node1, node2) -> Integer.compare(node1.val, node2.val));

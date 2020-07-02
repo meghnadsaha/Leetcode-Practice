@@ -11,7 +11,7 @@ In the beginning, set two pointers fast and slow starting at the head.
 sf
 (1) Move: fast pointer goes to the end, and slow goes to the middle.
 
-1 -> 1 -> 2 -> 1 -> null 
+1 -> 1 -> 2 -> 1 -> null 	
           s          f
 (2) Reverse: the right half is reversed, and slow pointer becomes the 2nd head.
 
@@ -25,8 +25,8 @@ h                      s
 */
 public class PalindromeLinkedList {
 
-	public boolean isPalindrome(ListNodee head) {
-		ListNodee fast = head, slow = head;
+	public boolean isPalindrome(ListNode head) {
+		ListNode fast = head, slow = head;
 		while (fast != null && fast.next != null) {
 			fast = fast.next.next;
 			slow = slow.next;
@@ -47,10 +47,10 @@ public class PalindromeLinkedList {
 		return true;
 	}
 
-	public ListNodee reverse(ListNodee head) {
-		ListNodee prev = null;
+	public ListNode reverse(ListNode head) {
+		ListNode prev = null;
 		while (head != null) {
-			ListNodee next = head.next;
+			ListNode next = head.next;
 			head.next = prev;
 			prev = head;
 			head = next;

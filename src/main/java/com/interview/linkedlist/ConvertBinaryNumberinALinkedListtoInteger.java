@@ -8,7 +8,7 @@ public class ConvertBinaryNumberinALinkedListtoInteger {
 		 	num += head.val; // Add next bit to num at least significant
 								// position
 			head = head.next; // Update head
-		}
+		} 
 		return num;
 	}
 }

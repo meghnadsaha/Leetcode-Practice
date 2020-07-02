@@ -6,7 +6,7 @@ public class Intersection {
 		ListNode B = headB;
 		while (A != null && B != null) {
 			A = A.next;
-			 B = B.next;
+			 B = B.next; 
 		}
 		int bdiff = 0;
 		int adiff = 0;

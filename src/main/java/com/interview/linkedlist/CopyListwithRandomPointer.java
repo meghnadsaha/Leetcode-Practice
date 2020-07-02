@@ -7,7 +7,7 @@ public class CopyListwithRandomPointer {
 		}
 
 		// copy linked list to following structure A -> A' -> B -> B' .... -> C
-		// -> C'
+		// -> C' 
 		ListNode p = head;
 		while (p != null) {
 			ListNode tmp = p.next;

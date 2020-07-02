@@ -8,7 +8,7 @@ public class LinkedListCycle {
 	 * If the Linked List has a cycle walker and runner
 	 * will meet at some point.
 	 */
-	public boolean hasCycle(ListNode head) {
+	public boolean hasCycle(ListNode head)  {
 		ListNode walker = head;
 		ListNode runner = head;
 		while (runner != null && runner.next != null) {
