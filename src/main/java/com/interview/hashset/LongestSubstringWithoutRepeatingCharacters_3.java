@@ -3,12 +3,6 @@ package com.interview.hashset;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.regex.MatchResult;
-
-import javax.swing.text.Highlighter.Highlight;
-
-import jdk.nashorn.internal.runtime.regexp.joni.MatcherFactory;
-
 public class LongestSubstringWithoutRepeatingCharacters_3 {
 
 	public int lengthOfLongestSubstring(String s) {
