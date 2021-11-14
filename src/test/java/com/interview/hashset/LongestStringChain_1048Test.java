@@ -1,13 +1,9 @@
 package com.interview.hashset;
 
-import static org.junit.Assert.*;
-
-import java.util.*;
-import java.util.stream.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.interview.dynamic.programming.LongestStringChain_1048;
+import com.interview.dynamic.programming.others.LongestStringChain_1048;
 
 public class LongestStringChain_1048Test {
 

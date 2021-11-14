@@ -1,7 +1,6 @@
 package com.interview.dynamic.programming;
 
-import static org.junit.Assert.*;
-
+import com.interview.dynamic.programming.others.PalindromePartitioningII_132;
 import org.junit.Assert;
 import org.junit.Test;
 

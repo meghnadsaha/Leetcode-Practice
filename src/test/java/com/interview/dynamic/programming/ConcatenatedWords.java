@@ -2,6 +2,7 @@ package com.interview.dynamic.programming;
 
 import java.util.*;
 
+import com.interview.dynamic.programming.others.ConcatenatedWords_472;
 import org.junit.Assert;
 import org.junit.Test;
 

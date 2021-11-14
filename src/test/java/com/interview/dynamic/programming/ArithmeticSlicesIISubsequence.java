@@ -1,7 +1,6 @@
 package com.interview.dynamic.programming;
 
-import static org.junit.Assert.*;
-
+import com.interview.dynamic.programming.others.ArithmeticSlicesIISubsequence_446;
 import org.junit.*;
 
 public class ArithmeticSlicesIISubsequence {
