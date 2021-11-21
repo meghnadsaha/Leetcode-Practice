@@ -22,7 +22,7 @@ public class LongestPalindromicSubstring {
         int diff = -1;
 
         // Uncomment it to print LPS Length array
-        // printf("%d %d ", L[0], L[1]);
+       // System.out.printf("%d %d ", L[0], L[1]);
         for (i = 2; i < N; i++) {
 
             // get currentLeftPosition iMirror
@@ -64,7 +64,7 @@ public class LongestPalindromicSubstring {
             }
 
             // Uncomment it to print LPS Length array
-            // printf("%d ", L[i]);
+            //System.out.printf("%d ", L[i]);
         }
 
         start = (maxLPSCenterPosition - maxLPSLength) / 2;
