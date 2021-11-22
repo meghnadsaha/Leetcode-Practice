@@ -1,5 +1,8 @@
 package com.interview.dynamic.programming.medium;
 
+
+//https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-4/
+//https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/
 public class LongestPalindromicSubstring {
     public String longestPalindrome(String text) {
         int N = text.length();
@@ -22,7 +25,6 @@ public class LongestPalindromicSubstring {
         int diff = -1;
 
         // Uncomment it to print LPS Length array
-       // System.out.printf("%d %d ", L[0], L[1]);
         for (i = 2; i < N; i++) {
 
             // get currentLeftPosition iMirror
