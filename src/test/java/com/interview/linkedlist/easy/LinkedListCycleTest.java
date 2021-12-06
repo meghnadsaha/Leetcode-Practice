@@ -32,39 +32,11 @@ public class LinkedListCycleTest {
     @Test
     public void testMergeTwoLists2() {
 
-//          HEAD→ → → → → →   3 → → → → →  2 → → → → 0
-//                                         ↑         ↓
-//                                          ← ← ← ← -4
 
-        int[] keys = {3, 2, 0, -4};
-        ListNode listNodeHead = null;
-        for (int i = keys.length - 1; i >= 0; i--) {
-            listNodeHead = new ListNode(keys[i], listNodeHead);
-        }
-
-        // insert cycle
-        listNodeHead.next.next.next = listNodeHead.next;
-
-        boolean expectedOutput = true;
-        LinkedListCycle linkedListCycle = new LinkedListCycle();
-        boolean actualOutput = linkedListCycle.hasCycle(listNodeHead);
-
-        Assert.assertEquals(expectedOutput, actualOutput);
-
-    }
-
-    @Test
-    public void testMergeTwoLists3() {
-        
-        int[] keys = {1};
-        ListNode listNodeHead = null;
-        for (int i = keys.length - 1; i >= 0; i--) {
-            listNodeHead = new ListNode(keys[i], listNodeHead);
-        }
 
         boolean expectedOutput = false;
         LinkedListCycle linkedListCycle = new LinkedListCycle();
-        boolean actualOutput = linkedListCycle.hasCycle(listNodeHead);
+        boolean actualOutput = linkedListCycle.hasCycle(new ListNode(1));
 
         Assert.assertEquals(expectedOutput, actualOutput);
 
