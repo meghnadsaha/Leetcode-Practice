@@ -7,9 +7,6 @@ import java.util.Objects;
  * */
 public class ListNode {
 
-
-
-
     public int val;
     public ListNode next;
     public Node random;
@@ -44,24 +41,6 @@ public class ListNode {
         Node new_node = new Node(new_data);
         new_node.next = random;
         random = new_node;
-    }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ListNode listNode = (ListNode) o;
-        return val == listNode.val && Objects.equals(next, listNode.next);
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((next == null) ? 0 : next.hashCode());
-        result = prime * result + val;
-        return result;
     }
 
 
