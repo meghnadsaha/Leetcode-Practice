@@ -30,7 +30,7 @@ public class ListNode {
         if (listNode == null)
             System.out.print("null");
         while (listNode.next != null) {
-            System.out.print(listNode.val + ".");
+            System.out.print(listNode.val + " → ");
             listNode = listNode.next;
         }
         System.out.print(listNode.val);
