@@ -43,5 +43,13 @@ public class ListNode {
         random = new_node;
     }
 
+    public static ListNode push(int[] llElements) {
+        ListNode listNodeHead = null;
+        for (int i = llElements.length - 1; i >= 0; i--) {
+            listNodeHead = new ListNode(llElements[i], listNodeHead);
+        }
+        return listNodeHead;
+    }
+
 
 }

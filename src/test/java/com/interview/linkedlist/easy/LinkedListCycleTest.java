@@ -12,11 +12,9 @@ public class LinkedListCycleTest {
 //                        ↑             ↓
 //                        20     ←      4
 
-        int[] keys = {10, 15, 4, 20};
-        ListNode listNodeHead = null;
-        for (int i = keys.length - 1; i >= 0; i--) {
-            listNodeHead = new ListNode(keys[i], listNodeHead);
-        }
+        int[] llElements = {10, 15, 4, 20};
+        ListNode listNodeHead = ListNode.push(llElements);
+
 
         // insert cycle
         listNodeHead.next.next.next.next = listNodeHead.next.next;
@@ -49,11 +47,9 @@ public class LinkedListCycleTest {
 //                                         ↑         ↓
 //                                          ← ← ← ← -4
 
-        int[] keys = {3, 2, 0, -4};
-        ListNode listNodeHead = null;
-        for (int i = keys.length - 1; i >= 0; i--) {
-            listNodeHead = new ListNode(keys[i], listNodeHead);
-        }
+        int[] llElements = {3, 2, 0, -4};
+        ListNode listNodeHead = ListNode.push(llElements);
+
 
         // insert cycle
         listNodeHead.next.next.next = listNodeHead.next;

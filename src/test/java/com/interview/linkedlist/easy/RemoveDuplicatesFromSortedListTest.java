@@ -8,20 +8,21 @@ public class RemoveDuplicatesFromSortedListTest {
     @Test
     public void testMergeTwoLists() {
 
-        ListNode list1 = new ListNode(1);
-        list1.next = new ListNode(2);
-        list1.next.next = new ListNode(2);
+        int llElements[]={1,2,2};
+        ListNode ll = ListNode.push(llElements);
 
-
-        ListNode expectedList = new ListNode(1);
-        expectedList.next = new ListNode(2);
+        int expectedLLElements[]={1,2};
+        ListNode expectedLL = ListNode.push(llElements);
 
 
         RemoveDuplicatesFromSortedList removeDuplicatesFromSortedList = new RemoveDuplicatesFromSortedList();
-        ListNode actualOutput = removeDuplicatesFromSortedList.deleteDuplicates(list1);
+        ListNode actualLL = removeDuplicatesFromSortedList.deleteDuplicates(ll);
 
-        Assert.assertEquals(expectedList, actualOutput);
-
+        while (actualLL.next != null) {
+            Assert.assertEquals(expectedLL.val, actualLL.val);
+            actualLL = actualLL.next;
+            expectedLL = expectedLL.next;
+        }
     }
 
 }
