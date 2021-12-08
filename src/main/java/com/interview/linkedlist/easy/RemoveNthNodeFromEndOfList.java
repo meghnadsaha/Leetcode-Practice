@@ -3,15 +3,18 @@ package com.interview.linkedlist.easy;
 import com.interview.linkedlist.others.ListNode;
 
 public class RemoveNthNodeFromEndOfList {
-    
+
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode fast = head, slow = head;
-        for (int i = 0; i < n; i++) fast = fast.next;
+        for (int i = 0; i < n; i++) fast = fast.next; // Current Fast = 3,4,5
         if (fast == null) return head.next;
         while (fast.next != null) {
-            fast = fast.next;
-            slow = slow.next;
+            fast = fast.next;//4,5 -> //5 -> //null
+            slow = slow.next;// 2, 3, 4, 5 -> // 3, 4, 5
         }
+        //Old slow  = 3    4      5
+        //            s  next   next
+        //New Slow =  3    5
         slow.next = slow.next.next;
         return head;
     }
