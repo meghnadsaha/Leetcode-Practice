@@ -2,6 +2,8 @@ package com.interview.linkedlist.easy;
 
 import com.interview.linkedlist.others.ListNode;
 
+//https://leetcode.com/problems/remove-nth-node-from-end-of-list/discuss/1164542/JS-Python-Java-C%2B%2B-or-Easy-Two-Pointer-Solution-w-Explanation
+
 public class RemoveNthNodeFromEndOfList {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
