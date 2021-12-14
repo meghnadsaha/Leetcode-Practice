@@ -22,19 +22,19 @@ public class SymmetricTreeTest {
         Assert.assertEquals(true,actualOutput);
     }
 
-    @Test
-    public void testMaxDepthOfBinaryTree() {
-        MaxDepthOfBinaryTree maxDepthOfBinaryTree = new MaxDepthOfBinaryTree();
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
-        root.right.left = new TreeNode(15);
-        root.right.right = new TreeNode(7);
-
-        int actualOutput = maxDepthOfBinaryTree.maxDepth(root);
-
-        Assert.assertEquals(3,actualOutput);
-    }
+//    @Test
+//    public void testMaxDepthOfBinaryTree() {
+//        MaxDepthOfBinaryTree maxDepthOfBinaryTree = new MaxDepthOfBinaryTree();
+//        TreeNode root = new TreeNode(3);
+//        root.left = new TreeNode(9);
+//        root.right = new TreeNode(20);
+//        root.right.left = new TreeNode(15);
+//        root.right.right = new TreeNode(7);
+//
+//        int actualOutput = maxDepthOfBinaryTree.maxDepth(root);
+//
+//        Assert.assertEquals(3,actualOutput);
+//    }
 
 
 }
