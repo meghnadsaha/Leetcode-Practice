@@ -1,8 +1,7 @@
 package com.interview.tree.easy;
 
 import com.interview.tree.common.TreeNode;
-import com.interview.tree.dfs.easy.InvertBinaryTree;
-import org.junit.Assert;
+import com.interview.tree.easy.dfs.InvertBinaryTree;
 import org.junit.Test;
 
 public class InvertBinaryTreeTest {
