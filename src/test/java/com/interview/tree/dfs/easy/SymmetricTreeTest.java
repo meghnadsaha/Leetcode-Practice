@@ -1,4 +1,4 @@
-package com.interview.tree.easy;
+package com.interview.tree.dfs.easy;
 
 import com.interview.tree.common.TreeNode;
 import org.junit.Assert;

@@ -1,7 +1,7 @@
 package com.interview.tree.bfs;
 
 import com.interview.tree.common.TreeNode;
-import com.interview.tree.easy.dfs.MaxDepthOfBT;
+import com.interview.tree.dfs.MaxDepthOfBT;
 import org.junit.Assert;
 import org.junit.Test;
 
