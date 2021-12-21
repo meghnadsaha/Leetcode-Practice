@@ -1,7 +1,7 @@
-package com.interview.tree.easy.dfs;
+package com.interview.tree.dfs.medium;
 
 import com.interview.tree.common.TreeNode;
-import com.interview.tree.medium.dfs.PathSumIII;
+import com.interview.tree.dfs.medium.dfs.PathSumIII;
 import org.junit.Assert;
 import org.junit.Test;
 
