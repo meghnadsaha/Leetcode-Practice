@@ -1,5 +1,6 @@
 package com.interview.heap;
 
+import com.interview.heap.medium.KthSmallestElementInASortedMatrix;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.interview.heap;
+package com.interview.heap.medium;
 
 import java.util.PriorityQueue;
 
