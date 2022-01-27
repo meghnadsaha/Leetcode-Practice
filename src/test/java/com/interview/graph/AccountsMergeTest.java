@@ -1,10 +1,9 @@
 package com.interview.graph;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Assert;
+import com.interview.graph.others.AccountsMerge;
 import org.junit.Test;
 
 public class AccountsMergeTest {

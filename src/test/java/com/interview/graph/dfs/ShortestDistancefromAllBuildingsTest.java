@@ -1,13 +1,9 @@
 package com.interview.graph.dfs;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.interview.graph.ShortestDistancefromAllBuildings;
+import com.interview.graph.others.ShortestDistancefromAllBuildings;
 
 public class ShortestDistancefromAllBuildingsTest {
 
