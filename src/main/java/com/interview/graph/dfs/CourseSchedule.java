@@ -3,7 +3,8 @@ package com.interview.graph.dfs;
 import java.util.*;
 
 public class CourseSchedule {
-	public boolean canFinish(int numCourses, int[][] prerequisites) {
+
+	public static boolean canFinish(int numCourses, int[][] prerequisites) {
 
 		Map<Integer, Set<Integer>> map = new HashMap<>();
 		int[] pre = new int[numCourses];
@@ -31,7 +32,13 @@ public class CourseSchedule {
 				}
 			}
 		}
-        return set.size() == numCourses;
+		return set.size() == numCourses;
+
+	}
+
+	public static void main(String args[]) {
+//		System.out.println(canFinish(2, new int[][]{{1, 0}, {0, 1}}));
+		System.out.println(canFinish(2, new int[][]{{1, 0}}));
 
 	}
 }
