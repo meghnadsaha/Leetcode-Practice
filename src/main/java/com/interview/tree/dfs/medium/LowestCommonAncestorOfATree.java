@@ -1,4 +1,4 @@
-package com.interview.tree.dfs.medium.dfs;
+package com.interview.tree.dfs.medium;
 
 import com.interview.tree.common.TreeNode;
 

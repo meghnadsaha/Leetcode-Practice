@@ -1,7 +1,6 @@
 package com.interview.tree.dfs.medium;
 
 import com.interview.tree.common.TreeNode;
-import com.interview.tree.dfs.medium.dfs.LowestCommonAncestorOfATree;
 import org.junit.Assert;
 import org.junit.Test;
 
