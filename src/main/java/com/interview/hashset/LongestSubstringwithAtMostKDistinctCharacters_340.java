@@ -6,8 +6,8 @@ public class LongestSubstringwithAtMostKDistinctCharacters_340 {
 	 * Given a string, find the length of the longest substring T that contains
 	 * at most k distinct characters.For example,
 	 * 
-	 * Given s = “eceba” and k = 2, T is "ece" which its length is 3
-	 * Given s = “aa” and k = 1, T is "aa" which its length is 2
+	 * Given s = eceba and k = 2, T is "ece" which its length is 3
+	 * Given s = aa and k = 1, T is "aa" which its length is 2
 	 * 
 	 * https://www.youtube.com/watch?v=KqXKT-QlCwY&list=PLxhNaYPwn9T62fCzMYo0o85xRr9V4tlXI&index=53
 	 * 
