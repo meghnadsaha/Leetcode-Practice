@@ -24,7 +24,7 @@ import java.util.Set;
 //
 //        1 2 3
 //        4 5 0 --> 0 can go to {2, 4}
-public class SlidingPuzzle {
+public class SlidingPuzzle_773 {
     public static int slidingPuzzle(int[][] board) {
         String target = "123450";
         StringBuilder start = new StringBuilder();
