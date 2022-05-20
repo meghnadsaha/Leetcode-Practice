@@ -1,7 +1,7 @@
 package com.interview.random.uber;
 
 public class RotateImage48 {
-    //    The idea was firstly transpose the matrix and then flip it symmetrically. For instance,
+//    The idea was firstly transpose the matrix and then flip it symmetrically. For instance,
 //
 //        1  2  3
 //        4  5  6
@@ -16,6 +16,7 @@ public class RotateImage48 {
 //        7  4  1
 //        8  5  2
 //        9  6  3.
+
     public void rotate(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = i; j < matrix[0].length; j++) {
