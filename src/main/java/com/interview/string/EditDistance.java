@@ -1,4 +1,4 @@
-package com.interview.string.hard;
+package com.interview.string;
 
 public class EditDistance {
     public static int minDistance(String word1, String word2) {
