@@ -1,4 +1,4 @@
-package com.interview.slidingwindow;
+package com.interview.sliding.window;
 
 public class SubstringWithConcatenationOfAllWords {
 
