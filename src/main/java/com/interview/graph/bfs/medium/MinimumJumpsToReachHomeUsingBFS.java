@@ -1,4 +1,4 @@
-package com.interview.graph.bfs;
+package com.interview.graph.bfs.medium;
 
 import java.util.LinkedList;
 import java.util.Queue;

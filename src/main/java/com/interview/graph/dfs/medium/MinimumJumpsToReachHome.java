@@ -1,4 +1,4 @@
-package com.interview.graph.dfs;
+package com.interview.graph.dfs.medium;
 
 
 public class MinimumJumpsToReachHome {

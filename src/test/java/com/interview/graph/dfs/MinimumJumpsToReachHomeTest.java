@@ -1,5 +1,6 @@
 package com.interview.graph.dfs;
 
+import com.interview.graph.dfs.medium.MinimumJumpsToReachHome;
 import org.junit.Assert;
 import org.junit.Test;
 
