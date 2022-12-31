@@ -1,72 +1,66 @@
 package com.interview.graph.dfs;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 
 public class MinimumJumpsToReachHome {
 
-    private static Map<String/*idx + direction*/, Integer> cache;
+    int target;
+    int forward;
+    int backward;
 
-    public static int minimumJumps(int[] forbidden, int a, int b, int x) {
-        cache = new HashMap<>();
-        Set<Integer> visited = new HashSet<>();
-        Set<Integer> forbit = new HashSet<>();
-        int maxLimit = 2000 + 2 * b;
-        for (int num : forbidden) {
-            forbit.add(num);
-            maxLimit = Math.max(maxLimit, num + 2 * b);
-        }
-        int val = helper(0, x, a, b, forbit, visited, 0, maxLimit);
-        return val == Integer.MAX_VALUE ? -1 : val;
+    public int minimumJumps(int[] forbidden, int a, int b, int x) {
+        target = x;
+        forward = a;
+        backward = b;
+        // constraints -> 0 <= a, b, x <= 2000, hence we only need to process x indices 0 - 6000
+        int[] DP = new int[1999];
+        // mark all forbidden indices with -1
+        for (int index : forbidden) DP[index] = -1;
+        // recursive processing
+        return getMinJumps(0, false, DP);
     }
 
-    private static int helper(int idx, int x, int a, int b, Set<Integer> forbit, Set<Integer> visited, int dir, int maxLimit) {
-        if (cache.containsKey(idx + "," + dir)) {
-            return cache.get(idx + "," + dir);
-        }
-        if (idx == x) return 0;
-        if (idx < 0 || idx > maxLimit) return Integer.MAX_VALUE;
-        visited.add(idx);
-        int min = Integer.MAX_VALUE;
-        //try jump forward
-        if (idx + a < maxLimit && !forbit.contains(idx + a) && !visited.contains(idx + a)) {
-            int step = helper(idx + a, x, a, b, forbit, visited, 0, maxLimit);
-            if (step != Integer.MAX_VALUE) {
-                min = Math.min(min, step + 1);
+    int getMinJumps(int index, boolean wasLastJumpBackward, int[] DP) {
+        // exclusion case -> cannot jump to negative indices
+        if (index < 0)
+            return -1;
+        // beyond this we will need more than 1 backward move to reach index between 0 to 2000
+        if (index >= DP.length)
+            return -1;
+        // terminate and return not possible if we are going in cycles
+        if (DP[index] == -2)
+            return -1;
+        // base case -> we have reached target
+        if (index == target)
+            return 0;
+        // return memoized result
+        if (DP[index] != 0)
+            return DP[index];
+
+        // process if not memoized
+        DP[index] = -2; // mark (-2) as being processed to avoid cycles
+        if (wasLastJumpBackward) {
+            // cannot perform 2 consequitive backward jumps
+            int moveForward = getMinJumps(index + forward, false, DP);
+
+            if (moveForward == -1) {
+                DP[index] = -1;
+            } else {
+                DP[index] = 1 + moveForward;
+            }
+        } else {
+            // get minimum of forward and backward jump paths
+            int moveBackward = getMinJumps(index - backward, true, DP);
+            int moveForward = getMinJumps(index + forward, false, DP);
+            System.out.println("moveBackward :"+moveBackward+ "  moveForward :"+moveForward);
+            if (moveBackward == -1 && moveForward == -1) {
+                DP[index] = -1;
+            }
+            else if (moveBackward == -1 || moveForward == -1) {
+                DP[index] = 1 + Math.max(moveForward, moveBackward);
+            } else {
+                DP[index] = 1 + Math.min(moveForward, moveBackward);
             }
         }
-        //try jump back
-        if (idx - b >= 0 && !forbit.contains(idx - b) && !visited.contains(idx - b) && dir != 1) {
-            int step = helper(idx - b, x, a, b, forbit, visited, 1, maxLimit);
-            if (step != Integer.MAX_VALUE) {
-                min = Math.min(min, step + 1);
-            }
-        }
-        visited.remove(idx);
-        cache.put(idx + "," + dir, min);
-        return min;
-    }
-
-    public static void main(String args[]) {
-
-
-        int[] forbidden = {14, 4, 18, 1, 15};
-        int a = 3, b = 15, x = 9;
-        int minimumJumps = minimumJumps(forbidden, a, b, x);
-        System.out.print(minimumJumps +" jumps forward will get the bug home.");
-
-        int[] forbidden1 = {8,3,16,6,12,20};
-        int a1 = 15, b1 = 13, x1 = 11;
-        int minimumJumps1 = minimumJumps(forbidden1, a1, b1, x1);
-        System.out.print("\n"+minimumJumps1+ " jumps forward will get the bug home.");
-
-
-        int[] forbidden2 = {1,6,2,14,5,17,4};
-        int a2 = 16, b2 = 9, x2 = 7;
-        int minimumJumps2 = minimumJumps(forbidden2, a2, b2, x2);
-        System.out.print("\n"+minimumJumps2+ " jumps forward will get the bug home.");
-
+        return DP[index];
     }
 }
