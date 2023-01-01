@@ -12,7 +12,7 @@ public class MinimumJumpsToReachHome {
         forward = a;
         backward = b;
         // constraints -> 0 <= a, b, x <= 2000, hence we only need to process x indices 0 - 6000
-        int[] DP = new int[1999];
+        int[] DP = new int[6001];
         // mark all forbidden indices with -1
         for (int index : forbidden) DP[index] = -1;
         // recursive processing
