@@ -1,4 +1,4 @@
-package com.interview.graph.dfs;
+package com.interview.graph.dfs.medium;
 
 import com.interview.graph.others.CloneGraphNode;
 
@@ -20,7 +20,8 @@ public class CloneGraph {
             CloneGraphNode clone = new CloneGraphNode(node.val);
             map.put(node.val,clone);
             for (int i = 0; i < node.neighbors.size(); i++) {
-                clone.neighbors.add(dfs(node.neighbors.get(i), map));
+                CloneGraphNode cNode = dfs(node.neighbors.get(i),map);
+                clone.neighbors.add(cNode);
             }
             return clone;
         }

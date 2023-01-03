@@ -1,6 +1,8 @@
 package com.interview.greedy.medium.bfs;
 
+
 public class JumpGameII {
+    //https://leetcode.com/problems/jump-game-ii/solutions/1192401/easy-solutions-w-explanation-optimizations-from-brute-force-to-dp-to-greedy-bfs/?orderBy=most_votes
     public int jump(int[] nums) {
 
         int n = nums.length, i = 0, maxReachable = 0, lastJumpedPos = 0, jumps = 0;
