@@ -8,6 +8,7 @@ import java.util.Queue;
 /**
  * @link :https://takeuforward.org/data-structure/kahns-algorithm-topological-sort-algorithm-bfs-g-22/
  * @link :https://www.scaler.com/topics/data-structures/topological-sort-algorithm/
+ * @207CourseSchedule :https://leetcode.com/problems/course-schedule/solutions/1478383/cycle-detection-in-directed-graph-dfs-bfs-java/?orderBy=most_votes&languageTags=java&topicTags=breadth-first-search
  * <p>
  * @Time Complexity:O(V+E),where V=no.of nodes and E=no.of edges.This is a simple BFS algorithm.
  * <p>
