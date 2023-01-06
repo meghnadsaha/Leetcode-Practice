@@ -4,19 +4,27 @@ import java.util.*;
 
 public class Subsets {
 
-	public List<List<Integer>> subsets(int[] nums) {
-		List<List<Integer>> list = new ArrayList<>();
-		Arrays.sort(nums);
-		backtrack(list, new ArrayList<>(), nums, 0);
-		return list;
-	}
+    List<List<Integer>> res = new LinkedList<>();
+    int[] nums;
 
-	private void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums, int start) {
-		list.add(new ArrayList<>(tempList));
-		for (int i = start; i < nums.length; i++) {
-			tempList.add(nums[i]);
-			backtrack(list, tempList, nums, i + 1);
-			tempList.remove(tempList.size() - 1);
-		}
-	}
+    public List<List<Integer>> subsets(int[] nums) {
+        this.nums = nums;
+        Arrays.sort(nums);
+        helper(new LinkedList<Integer>(), 0);
+        return res;
+    }
+
+    private void helper(List<Integer> comb, int index) {
+        // Check if we found a combination
+        res.add(new ArrayList(comb));
+
+        // DFS all the paths
+        for (int i = index; i < nums.length; i++) {
+            comb.add(nums[i]);
+            helper(comb, i + 1);// We can still reuse the same element dfs down the path
+            comb.remove(comb.size() - 1);
+        }
+    }
+
+
 }
