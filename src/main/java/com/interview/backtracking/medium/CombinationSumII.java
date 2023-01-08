@@ -11,7 +11,15 @@ public class CombinationSumII {
     int[] candidates;
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        Arrays.sort(candidates);
+//        Arrays.sort(candidates);
+        /**
+         * If we will not sort  the array then
+         * Output will be :-
+         * [[1,2,5],[1,7],[1,6,1],[2,6],[2,1,5],[7,1]]
+         * Where Expected one is : -
+         * [[1,1,6],[1,2,5],[1,7],[2,6]]
+         */
+
         this.candidates = candidates;
         helper(target, new LinkedList<Integer>(), 0);
         return res;
@@ -27,14 +35,13 @@ public class CombinationSumII {
         // DFS all the paths
         for (int i = index; i < candidates.length; i++) {
 
-            if (i != index && candidates[i] == candidates[i - 1])
-                continue;
+            if (i != index && candidates[i] == candidates[i - 1]) continue;
 
             int curSum = target - candidates[i];
             // Check if out of bound
             if (curSum < 0) continue;
             comb.add(candidates[i]);
-            helper(curSum, comb, i+1);// We can still reuse the same element dfs down the path
+            helper(curSum, comb, i + 1);// We can still reuse the same element dfs down the path
             comb.remove(comb.size() - 1);
         }
     }

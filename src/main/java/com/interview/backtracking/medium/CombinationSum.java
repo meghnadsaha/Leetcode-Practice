@@ -23,7 +23,7 @@ public class CombinationSum {
         }
         // DFS all the paths
         for (int i = index; i < candidates.length; i++) {
-         //   for (int i = 0; i < candidates.length; i++) {
+            //   for (int i = 0; i < candidates.length; i++) {
             /**
              *
              * If we Start from indices i = 0 then out put will be like this
@@ -36,7 +36,7 @@ public class CombinationSum {
              */
 
 
-                int curSum = target - candidates[i];
+            int curSum = target - candidates[i];
             // Check if out of bound
             if (curSum < 0) continue;
             comb.add(candidates[i]);
