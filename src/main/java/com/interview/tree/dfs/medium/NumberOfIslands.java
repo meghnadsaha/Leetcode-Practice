@@ -3,24 +3,28 @@ package com.interview.tree.dfs.medium;
 public class NumberOfIslands {
 
     public int numIslands(char[][] grid) {
-        int count = 0;
-        for (int i = 0; i < grid.length; i++)
-            for (int j = 0; j < grid[0].length; j++) {
+        int m = grid.length;
+        int n = grid[0].length;
+        int islands = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1') {
-                    dfsFill(grid, i, j);
-                    count++;
+                    islands++;
+                    eraseIslands(grid, i, j);
                 }
             }
-        return count;
+        }
+        return islands;
     }
 
-    private void dfsFill(char[][] grid, int i, int j) {
-        if (i >= 0 && j >= 0 && i < grid.length && j < grid[0].length && grid[i][j] == '1') {
-            grid[i][j] = '0';
-            dfsFill(grid, i + 1, j);//()
-            dfsFill(grid, i - 1, j);
-            dfsFill(grid, i, j + 1);
-            dfsFill(grid, i, j - 1);
+    private void eraseIslands(char[][] grid, int i, int j) {
+        int m = grid.length, n = grid[0].length;
+        if (i < 0 || i == m || j < 0 || j == n || grid[i][j] == '0') {
+            return;
         }
-    }
-}
+        grid[i][j] = '0';
+        eraseIslands(grid, i - 1, j);
+        eraseIslands(grid, i + 1, j);
+        eraseIslands(grid, i, j - 1);
+        eraseIslands(grid, i, j + 1);
+    }}
