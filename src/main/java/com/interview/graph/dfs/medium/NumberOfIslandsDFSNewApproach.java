@@ -6,11 +6,11 @@ import com.interview.util.CommonUtil;
 public class NumberOfIslandsDFSNewApproach {
 
     public int numIslands(char[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
+        int lengthOfTheNows = grid.length;
+        int lengthOfTheColumns = grid[0].length;
         int islands = 0;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < lengthOfTheNows; i++) {
+            for (int j = 0; j < lengthOfTheColumns; j++) {
                 if (grid[i][j] == '1') {
                     islands++;
                     eraseIslands(grid, i, j);
@@ -28,9 +28,14 @@ public class NumberOfIslandsDFSNewApproach {
         grid[i][j] = '0';
         CommonUtil.print2D(grid);
         System.out.print("\n");
+
+        /*⬆️*/
         eraseIslands(grid, i - 1, j);
+        /*⬇️*/
         eraseIslands(grid, i + 1, j);
+        /*⬅️*/
         eraseIslands(grid, i, j - 1);
+        /*➡️*/
         eraseIslands(grid, i, j + 1);
     }
 };

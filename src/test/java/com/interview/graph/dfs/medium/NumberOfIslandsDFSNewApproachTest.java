@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class NumberOfIslandsDFSNewApproachTest {
-
     protected NumberOfIslandsDFSNewApproach numberOfIslandsDFSNewApproach = new NumberOfIslandsDFSNewApproach();
 
   @Test
