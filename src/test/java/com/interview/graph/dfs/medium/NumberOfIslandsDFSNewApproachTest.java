@@ -9,7 +9,6 @@ public class NumberOfIslandsDFSNewApproachTest {
   @Test
     public void checkNumIslands() {
         char[][] grid = {
-                {'1', '1', '1', '1', '0'},
                 {'1', '1', '0', '1', '0'},
                 {'1', '1', '0', '0', '0'},
                 {'0', '0', '0', '0', '0'}
