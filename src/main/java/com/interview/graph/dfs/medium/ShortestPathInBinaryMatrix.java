@@ -21,7 +21,17 @@ public class ShortestPathInBinaryMatrix {
         if (grid[0][0] == 1 || grid[row - 1][col - 1] == 1) {
             return -1;
         }
-        int[][] directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
+        int[][] directions = {
+                {-1, 0},   // Up            :Represents moving upwards by decreasing the row index (Up).
+                {1, 0},    // Down          :Represents moving downwards by increasing the row index (Down).
+                {0, -1},   // Left          :Represents moving towards the left by decreasing the column index (Left).
+                {0, 1},    // Right         :Represents moving towards the right by increasing the column index (Right).
+                {-1, -1},  // Up-Left       :Represents moving diagonally towards the top-left by decreasing both the row and column indices (Up-Left).
+                {-1, 1},   // Up-Right      :Represents moving diagonally towards the top-right by decreasing the row index and increasing the column index (Up-Right).
+                {1, -1},   // Down-Left     :Represents moving diagonally towards the bottom-left by increasing the row index and decreasing the column index (Down-Left).
+                {1, 1}     // Down-Right    :Represents moving diagonally towards the bottom-right by increasing both the row and column indices (Down-Right).
+        };
+
         //1. Initialize a queue to perform BFS traversal and a visited set to keep track of visited cells.
         Queue<int[]> queue = new LinkedList<>();
         boolean[][] visited = new boolean[row][col];
